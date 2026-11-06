@@ -30,8 +30,6 @@
 
 ## Files in replication
 
-Figures A.5 and A.6 use a random placebo draw (seed set in `05_csdid_main.R`), so the plots vary with the seed.
-
 | file | what it is |
 |---|---|
 | `replication/run_all.sh` | runs everything |
