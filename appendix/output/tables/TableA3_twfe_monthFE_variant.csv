@@ -1,0 +1,4 @@
+"Coefficient","Estimate","Std.Error","t.Statistic","p.Value"
+"(Intercept)",115.889,0.76,152.406,0
+"Treatment X Treated",-5.954,0.447,-13.32,0
+"Weekly Death Rate",0.42,0.065,6.477,0
