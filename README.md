@@ -49,3 +49,7 @@ Figures A.5 and A.6 use a random placebo draw (seed set in `05_csdid_main.R`), s
 | `replication/data/processed/` | panels built by the scripts (created when run) |
 | `replication/output/figures/` | Figure1, Figure2, FigureA3 (one file per sector plus the combined panel), FigureA4, FigureA5, FigureA6 |
 | `replication/output/tables/` | TableA1, TableA2, TableA3, Figure 2 ATT by week, placebo assignments for A.5 and A.6 |
+
+## License
+
+The code is under the MIT License (see `LICENSE`). The data in `Data/` from Indeed Hiring Lab, BLS, CDC and FRED stays under the terms of its original source.
