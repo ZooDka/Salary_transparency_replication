@@ -3,6 +3,7 @@ library(plm)
 library(did)
 library(dplyr)
 library(tidyr)
+library(ggplot2)
 
 ####Data Management####
 df <- read.csv('JoinedDF_age081924.csv')
@@ -71,7 +72,7 @@ printedPlot <- ggplot(dfTreatedOnly, aes(x=countdown, y=ddIndeed, color = as.fac
   geom_point(size = 0.75) +
   theme(legend.position="bottom", plot.title = element_text(hjust = 0.5), text = element_text(size = 15))+
   geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95, aes(group = is_date_passed), size = 1.5) +
-  labs(title = "Indeed Job Postings (Normalized by State and Week)", x="Relative Time From Treatment", y="Indeed Job Posting Index", color = "Treatment Status") #+ 
+  labs(title = "Indeed Job Postings (Normalized by State and Week)", x="Relative Time From Treatment", y="Indeed Job Posting Index", color = "Treatment Status") +
   scale_color_manual(name = "Treatment Status", labels = c("Pretreatment States", "PostTreatment States"), values = c("#5ab4ac", "#E69F00"))
 
 printedPlot
@@ -140,27 +141,27 @@ myEventStudy90<-EventStudy(
    cluster = TRUE
  )  
  
-myEventStudy120<-EventStudy(    
-   estimator = "OLS",
-   data = df,
-   outcomevar = "indeed_job_postings_index",
-   policyvar = "is_date_passed",
-   control = "dweekly_deathRate",
-   idvar = "state",
-   timevar = "weeks",
-   FE = TRUE, TFE = TRUE,
-   post = 120, #overidpre = 24,
-   pre  = 0, #overidpost = 24,
-   normalize = -1,
-   cluster = TRUE
- )  
+# myEventStudy120<-EventStudy(    
+#    estimator = "OLS",
+#    data = df,
+#    outcomevar = "indeed_job_postings_index",
+#    policyvar = "is_date_passed",
+#    control = "dweekly_deathRate",
+#    idvar = "state",
+#    timevar = "weeks",
+#    FE = TRUE, TFE = TRUE,
+#    post = 120, #overidpre = 24,
+#    pre  = 0, #overidpost = 24,
+#    normalize = -1,
+#    cluster = TRUE
+#  )  
  
 plt15 <- EventStudyPlot(estimates = myEventStudy15)
 plt30 <- EventStudyPlot(estimates = myEventStudy30)
 plt60 <- EventStudyPlot(estimates = myEventStudy60)
-plt90 <- EventStudyPlot(estimates = myEventStudy90)
-plt120 <- EventStudyPlot(estimates = myEventStudy120)
-plt15; plt30; plt60; plt90; plt120;
+# plt90 <- EventStudyPlot(estimates = myEventStudy90)
+# plt120 <- EventStudyPlot(estimates = myEventStudy120)
+plt15; plt30; plt60;# plt90; plt120;
 
 ####Calloway and San'tanna, historically required monthly data####
 
@@ -207,5 +208,5 @@ agg.ct <- aggte(example_attgt, type = "calendar", min_e = -52, max_e = 52,
 summary(agg.ct)
 ggdid(agg.ct)
 
-View(df[df$groupedByTreatLength == 205])
-View(df[df$groupedByTreatLength == 190])
+if (interactive()) View(df[df$groupedByTreatLength == 205,])
+if (interactive()) View(df[df$groupedByTreatLength == 190,])

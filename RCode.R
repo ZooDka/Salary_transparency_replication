@@ -194,8 +194,8 @@ agg.ct <- aggte(example_attgt, type = "calendar", min_e = -52, max_e = 52,
 summary(agg.ct)
 ggdid(agg.ct)
 
-View(df[df$groupedByTreatLength == 205])
-View(df[df$groupedByTreatLength == 190])
+if (interactive()) View(df[df$groupedByTreatLength == 205,])
+if (interactive()) View(df[df$groupedByTreatLength == 190,])
 
 
 
