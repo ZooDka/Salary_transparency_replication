@@ -1,0 +1,7 @@
+Data/combined_data.csv
+replication/data/processed/
+Rplots.pdf
+.DS_Store
+.Rhistory
+.ipynb_checkpoints/
+__pycache__/

@@ -24,8 +24,6 @@
 | `Data/RR/` | BLS QCEW quarterly employment workbooks 2020Q1 to 2024Q2; `00a_build_combined_data.py` stacks them into `Data/combined_data.csv` |
 | `Data/population.csv` | annual state population (FRED) |
 | `Data/fredgraph-*.csv` | monthly state unemployment rates (FRED), read by the notebook, not used in the paper |
-| `paper/` | published paper (`TheEffectofMandatorySalaryRevelations.pdf`, `researchPaper.pdf`), preprint (`Indeed_Job_Postings.pdf`), references (`.bib`) |
-| `unused/` | earlier data pulls, earlier notebook runs, and the earlier daily version (`unused/R/`); nothing in the paper uses these |
 | `replication/` | code for every table and figure, files listed below |
 
 ## Files in replication

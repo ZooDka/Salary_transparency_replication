@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # One-time environment setup. Tested on Ubuntu 24.04 with R 4.3.3.
 #
-# Python:  pandas >= 2.0, numpy
+# Python:  pandas >= 2.0, numpy, openpyxl
 # R:       dplyr tidyr ggplot2 ggpubr data.table Matrix pbapply sandwich lmtest broom
 #          + did 2.1.2 / DRDID 1.0.6 / BMisc 1.4.6 / trust
 set -euo pipefail
 
-pip install "pandas>=2.0" numpy
+pip install "pandas>=2.0" numpy openpyxl
 
 # --- R packages from CRAN -----------------------------------
 Rscript -e '
