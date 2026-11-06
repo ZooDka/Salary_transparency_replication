@@ -2,7 +2,8 @@
 
 ## How to run
 
-1. Python: `pip install -r requirements.txt`. Build `Data/combined_data.csv` (too big for GitHub) from the QCEW workbooks: `python3 replication/code/00a_build_combined_data.py Data/RR Data/combined_data.csv`. Then `Copy_of_121324EditsResearchZogaIndeed.ipynb` reads its input files from its own folder, so copy it into `Data/` and run it there (or on Colab with the `Data/` files uploaded next to it). It writes `JoinedDF_age<date>.csv`, which is the same as `JoinedDF_age081924.csv` in this folder.
+1. Python: `pip install -r requirements.txt`. From this folder run `python3 replication/code/01_build_weekly_panel.py`. It builds the weekly panel from the files in `Data/` and writes `replication/data/processed/JoinedDF_age.csv`, which is the same as `JoinedDF_age081924.csv` in this folder.
+   The original notebook `Copy_of_121324EditsResearchZogaIndeed.ipynb` does the same steps. To run it, first build `Data/combined_data.csv` (too big for GitHub) from the QCEW workbooks: `python3 replication/code/00a_build_combined_data.py Data/RR Data/combined_data.csv`. The notebook reads its input files from its own folder, so copy it into `Data/` and run it there (or on Colab with the `Data/` files uploaded next to it). It writes `JoinedDF_age<date>.csv`.
 2. R: install the packages in `R_packages.txt`. From this folder run `RCode.R` (Section 3, Figure 2, Section 4 numbers) and `TransparencyAndIndeed2024_09_12.R` (same plus Figure 1 and Table A.1).
 3. `TableA2_A3.R` (run from this folder) prints Table A.2 and Table A.3.
 4. `replication/`: `bash setup_environment.sh` then `bash run_all.sh` for Figures A.3 to A.6. Results go to `replication/output/`.
