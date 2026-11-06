@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
   library(did)
 })
 
-# Run every script from the appendix folder:  Rscript code/03_summary_stats.R
+# Run every script from the replication folder:  Rscript code/03_summary_stats.R
 ROOT <- Sys.getenv("REPL_ROOT", unset = getwd())
 PROC <- file.path(ROOT, "data", "processed")
 FIG  <- file.path(ROOT, "output", "figures")
