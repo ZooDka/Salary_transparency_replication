@@ -50,6 +50,16 @@ Figures A.5 and A.6 use a random placebo draw (seed set in `05_csdid_main.R`), s
 | `replication/output/figures/` | Figure1, Figure2, FigureA3 (one file per sector plus the combined panel), FigureA4, FigureA5, FigureA6 |
 | `replication/output/tables/` | TableA1, TableA2, TableA3, Figure 2 ATT by week, placebo assignments for A.5 and A.6 |
 
+## Data sources
+
+| data | source |
+|---|---|
+| `Data/state_job_postings_us_072924.csv` | Indeed Hiring Lab, Job Postings Tracker, https://github.com/hiring-lab/job_postings_tracker. Licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). |
+| `Data/covid_concatinated_*.csv`, `Data/covid_raw_files/` | Centers for Disease Control and Prevention, COVID Data Tracker, https://covid.cdc.gov/covid-data-tracker/#trends_weeklydeaths_totaldeathrateaa_01 |
+| `Data/RR/` | U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages, https://www.bls.gov/cew/downloadable-data-files.htm |
+| `Data/population.csv`, `Data/fredgraph-*.csv` | FRED, Federal Reserve Bank of St. Louis, https://fred.stlouisfed.org |
+| `Data/LawPassed_072424.csv` | hand-coded by the authors from Westlaw |
+
 ## License
 
 The code is under the MIT License (see `LICENSE`). The data in `Data/` from Indeed Hiring Lab, BLS, CDC and FRED stays under the terms of its original source.
