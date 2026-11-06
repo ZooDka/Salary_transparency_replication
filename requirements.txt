@@ -1,0 +1,8 @@
+# Python packages for the notebook (pandas 2.x and seaborn < 0.14 are required)
+pandas>=2.0,<3
+numpy
+matplotlib
+seaborn<0.14
+scikit-learn
+statsmodels
+jupyter

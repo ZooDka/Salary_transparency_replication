@@ -1,0 +1,3 @@
+# R packages for RCode.R, TransparencyAndIndeed2024_09_12.R and TableA2_A3.R
+# did 2.1.2 (with DRDID 1.0.6, BMisc 1.4.6), eventstudyr 1.1.3, plm, dplyr, tidyr, ggplot2, vtable, xtable
+install.packages(c("did","eventstudyr","plm","dplyr","tidyr","ggplot2","vtable","xtable"))
